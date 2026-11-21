@@ -1,0 +1,24 @@
+[package]
+name = "sebok"
+version = "0.1.0"
+edition = "2024"
+license = "MIT OR Apache-2.0"
+rust-version = "1.85"
+description = "Universal, runtime-agnostic asynchronous HTTP/1.1 server engine and connection lifecycle manager for Rust."
+repository = "https://github.com/Hitarashi/sebok"
+readme = "README.md"
+keywords = ["http", "server", "http1", "runtime-agnostic", "web"]
+categories = ["web-programming::http-server", "network-programming", "asynchronous"]
+
+[dependencies]
+async-lock = "3.5.0"
+bytes = "1.12.2"
+futures-io = "0.3.34"
+futures-util = { version = "0.3.34", default-features = false, features = ["io", "alloc", "std"] }
+http = "1.5.0"
+httparse = "1.10.1"
+
+[dev-dependencies]
+futures-lite = "2.6.1"
+proptest = "1.12.0"
+tokio = { version = "1.54.1", default-features = false, features = ["full", "io-util"] }
